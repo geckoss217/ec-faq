@@ -600,4 +600,48 @@
   <div class="services-section">
     <p class="services-label">Our Cleanup Services</p>
     <ul class="services-list">
-      <li><a href="https://emergencycleanings.com/hoarding-cleanup-ser
+      <li><a href="https://emergencycleanings.com/hoarding-cleanup-services/">Hoarding Cleanup</a></li>
+      <li><a href="https://emergencycleanings.com/crime-scene-cleanup/">Crime Scene Cleanup</a></li>
+      <li><a href="https://emergencycleanings.com/after-death-cleaning/">After-Death Cleaning</a></li>
+      <li><a href="https://emergencycleanings.com/sewage-backup-cleanup/">Sewage Backup Cleanup</a></li>
+      <li><a href="https://emergencycleanings.com/biohazard-cleanup/">Biohazard Cleanup</a></li>
+      <li><a href="https://emergencycleanings.com/junk-removal/">Junk Removal</a></li>
+      <li><a href="https://emergencycleanings.com/mold-remediation/">Mold Remediation</a></li>
+      <li><a href="https://emergencycleanings.com/eviction-cleanout/">Eviction Cleanout</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Emergency Cleanings &mdash; Nationwide 24/7 Specialty Cleanup</p>
+  <p>Call <a href="tel:8333464652">833-346-4652</a> &nbsp;&middot;&nbsp; <a href="https://emergencycleanings.com">emergencycleanings.com</a></p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        var answerId = this.getAttribute('aria-controls');
+        var answer   = document.getElementById(answerId);
+
+        // Close all
+        document.querySelectorAll('.faq-question').forEach(function(b) {
+          b.setAttribute('aria-expanded', 'false');
+          var a = document.getElementById(b.getAttribute('aria-controls'));
+          if (a) a.style.display = 'none';
+        });
+
+        // Open current if it was closed
+        if (!expanded) {
+          this.setAttribute('aria-expanded', 'true');
+          answer.style.display = 'block';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
